@@ -1,60 +1,800 @@
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-	background-color: #edefde;
-	margin: 0;
-	font-family: sans-serif;
+  background-color: #edefde;
+  margin: 0;
+  font-family: sans-serif;
 }
+
 main {
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
+
 .image-container {
-	width: 100%;
-	max-width: 1000px;
-	margin: 0 auto;
-	overflow: hidden;
-	position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
+
 section {
-	width: 100%;
-	overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
+
 img {
-	display: block;
-	width: 100%;
-	height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
+
 .hero img {
-	width: 101%;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
+  width: 101%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 section:nth-child(6) {
-	margin-bottom: -2px;
-	position: relative;
-	z-index: 2;
+  margin-bottom: -2px;
+  position: relative;
+  z-index: 2;
 }
+
 section:nth-child(7) {
-	position: relative;
-	z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 section:nth-child(8) {
-	margin-bottom: -2px;
-	position: relative;
-	z-index: 2;
+  margin-bottom: -2px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Types Section with Buttons */
+.types-section {
+  position: relative;
+  width: 100%;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  margin: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.button-link {
+  text-decoration: none;
+  width: calc(50% - 15px);
+  max-width: 300px;
+}
+
+.type-button {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0;
+}
+
+.button-bg {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 70px;
+}
+
+.jelly-gradient {
+  background: linear-gradient(63deg, #60A76D 0%, #A0D462 100%);
+}
+
+.drink-gradient {
+  background: linear-gradient(113deg, #70C26C 0%, #D7D475 100%);
+}
+
+.button-text {
+  width: 75%;
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  color: white;
+  font-size: 21px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.30);
+  pointer-events: none;
+  text-align: left;
+}
+
+.button-circle {
+  width: 28.78px;
+  height: 30px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background: white;
+  border-radius: 9999px;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.type-button:hover .button-bg,
+.type-button:focus .button-bg {
+  filter: brightness(0.95);
+}
+
+.type-button:active .button-bg {
+  filter: brightness(0.9);
+  transform: scale(0.98);
+}
+
+.button-bg {
+  transition: filter 0.3s ease, transform 0.1s ease;
+}
+
+/* Premium Banner with Split Background */
+.pricing-section, .pricing {
+  background-color: #004A00;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display: block;
+}
+
+.product-section, .product {
+  background-color: white;
+  margin-top: 0;
+  padding-top: 0;
+  display: block;
+}
+
+.banner-section {
+  height: 140px;
+  background: linear-gradient(to bottom, #004A00 50%, white 50%);
+  position: relative;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.banner-link {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-content {
+  width: 630px;
+  height: 140px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* Position styling for bottom banner */
+.pricing2-section {
+  position: relative;
+}
+
+.banner-link-bottom {
+  position: absolute;
+  bottom: 12%; /* Position from bottom of section */
+  left: 0;
+  width: 100%;
+  height: 140px;
+  z-index: 10; /* Ensure banner is above the image */
+}
+
+.banner-link-bottom .banner-content {
+  width: 630px;
+  height: 140px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* Hide sticky button when reaching the footer area */
+.hide-sticky-button {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.banner-bg-shadow {
+  width: 630px;
+  height: 139px;
+  left: 0;
+  top: 1px;
+  position: absolute;
+  background: #004A00;
+  border-radius: 8px;
+}
+
+.banner-bg {
+  width: 630px;
+  height: 134px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: linear-gradient(90deg, #DAAF47 0%, #F9E899 59%, #DAAF47 100%);
+  border-radius: 8px;
+}
+
+.banner-subtitle {
+  position: absolute;
+  left: 107px;
+  top: 27px;
+  color: #004A00;
+  font-size: 23px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  width: 486px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-title {
+  position: absolute;
+  left: 107px;
+  top: 59px;
+  color: #004A00;
+  font-size: 34px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  width: 486px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 25px;
+  top: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Banner Cart Icon */
+.banner-cart-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.banner-eye1,
+.banner-eye2,
+.banner-mouth {
+  display: none;
+}
+
+.banner-link:hover .banner-bg {
+  background: linear-gradient(90deg, #CAAF47 0%, #E9D889 59%, #CAAF47 100%);
+}
+
+.banner-link:active .banner-content {
+  transform: translateX(-50%) scale(0.98);
+}
+
+/* Sticky Purchase Button */
+.sticky-button {
+  width: 166px;
+  height: 171px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  animation: pulse 2s infinite;
+}
+
+.outer-circle {
+  width: 166px;
+  height: 166px;
+  left: 0;
+  top: 5px;
+  position: absolute;
+  background: linear-gradient(70deg, #DAAF47 0%, #F9E899 59%, #DAAF47 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30) inset;
+  border-radius: 9999px;
+}
+
+.inner-circle {
+  width: 154px;
+  height: 154px;
+  left: 6px;
+  top: 11px;
+  position: absolute;
+  background: linear-gradient(70deg, #DAAF47 0%, #F9E899 59%, #DAAF47 100%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.30) inset;
+  border-radius: 9999px;
+}
+
+.button-image {
+  width: 132.98px;
+  height: 62px;
+  left: 14px;
+  top: 0;
+  position: absolute;
+}
+
+.premium-text {
+  left: 14px;
+  top: 65px;
+  position: absolute;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  line-height: 25.40px;
+  width: 138px;
+  background: linear-gradient(100deg, #054D19 0%, #4F9652 98%, #054D19 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-text {
+  left: 42px;
+  top: 94px;
+  position: absolute;
+  text-align: center;
+  color: #2E2E2E;
+  font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  line-height: 25px;
+  word-wrap: break-word;
+}
+
+.sticky-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  animation: none;
+}
+
+/* Keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  .button-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .type-button {
+    height: 50px;
+  }
+  
+  .button-text {
+    font-size: 19px;
+  }
+  
+  .button-circle {
+    width: 24px;
+    height: 25px;
+  }
+  
+  .arrow-icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sticky-button {
+    width: 120px;
+    height: 124px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .outer-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .inner-circle {
+    width: 111px;
+    height: 111px;
+    left: 4.5px;
+    top: 8px;
+  }
+  
+  .button-image {
+    width: 96px;
+    height: 45px;
+    left: 10px;
+  }
+  
+  .premium-text {
+    left: 10px;
+    top: 47px;
+    font-size: 12px;
+    line-height: 18px;
+    width: 100px;
+  }
+  
+  .cta-text {
+    left: 30px;
+    top: 68px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  .button-container {
+    gap: 15px;
+  }
+  
+  .type-button {
+    height: 45px;
+  }
+  
+  .button-text {
+    font-size: 16px;
+  }
+  
+  .button-circle {
+    width: 20px;
+    height: 22px;
+    right: 15px;
+  }
+  
+  .arrow-icon {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .banner-section {
+    height: 100px;
+  }
+  
+  .banner-content {
+    width: 500px;
+    height: 100px;
+  }
+  
+  .banner-bg-shadow {
+    width: 500px;
+    height: 99px;
+  }
+  
+  .banner-bg {
+    width: 500px;
+    height: 95px;
+  }
+  
+  .banner-subtitle {
+    left: 80px;
+    top: 20px;
+    font-size: 16px;
+    width: 380px;
+  }
+  
+  .banner-title {
+    left: 80px;
+    top: 45px;
+    font-size: 24px;
+    width: 380px;
+  }
+  
+  .banner-circle {
+    width: 45px;
+    height: 45px;
+    left: 20px;
+    top: 30px;
+  }
+  
+  .banner-cart-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .banner-link-bottom {
+    height: 100px;
+    bottom: 12%;
+  }
+  
+  .banner-link-bottom .banner-content {
+    width: 500px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    gap: 10px;
+  }
+  
+  .type-button {
+    height: 40px;
+  }
+  
+  .button-text {
+    font-size: 14px;
+    left: 12%;
+  }
+  
+  .button-circle {
+    width: 18px;
+    height: 18px;
+    right: 12px;
+  }
+  
+  .arrow-icon {
+    width: 7px;
+    height: 7px;
+  }
+  
+  /* Position the banner lower for smaller screens */
+  .banner-link-bottom {
+    bottom: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sticky-button {
+    width: 100px;
+    height: 103px;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .outer-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .inner-circle {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: 7px;
+  }
+  
+  .button-image {
+    width: 80px;
+    height: 37px;
+    left: 8px;
+  }
+  
+  .premium-text {
+    left: 8px;
+    top: 38px;
+    font-size: 10px;
+    line-height: 16px;
+    width: 84px;
+  }
+  
+  .cta-text {
+    left: 26px;
+    top: 56px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .button-container {
+    gap: 8px;
+  }
+  
+  .type-button {
+    height: 35px;
+  }
+  
+  .button-text {
+    font-size: 11px;
+    left: 10%;
+    width: 70%;
+  }
+  
+  .button-circle {
+    width: 15px;
+    height: 15px;
+    right: 10px;
+  }
+  
+  .arrow-icon {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .banner-section {
+    height: 80px;
+  }
+  
+  .banner-content {
+    width: 90%;
+    height: 80px;
+  }
+  
+  .banner-bg-shadow, .banner-bg {
+    width: 100%;
+  }
+  
+  .banner-bg-shadow {
+    height: 79px;
+  }
+  
+  .banner-bg {
+    height: 76px;
+  }
+  
+  .banner-subtitle {
+    left: 60px;
+    top: 15px;
+    font-size: 12px;
+    width: calc(100% - 70px);
+  }
+  
+  .banner-title {
+    left: 60px;
+    top: 35px;
+    font-size: 18px;
+    width: calc(100% - 70px);
+  }
+  
+  .banner-circle {
+    width: 35px;
+    height: 35px;
+    left: 15px;
+    top: 23px;
+  }
+  
+  .banner-cart-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .banner-link-bottom {
+    height: 80px;
+    bottom: 3%; /* Position lower on mobile screens */
+  }
+  
+  .banner-link-bottom .banner-content {
+    width: 90%;
+    height: 80px;
+  }
+}
+
+@media (max-width: 360px) {
+  .button-container {
+    gap: 5px;
+  }
+  
+  .type-button {
+    height: 30px;
+  }
+  
+  .button-text {
+    font-size: 8px;
+    left: 8%;
+  }
+  
+  .button-circle {
+    width: 12px;
+    height: 12px;
+    right: 8px;
+  }
+  
+  .arrow-icon {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .banner-section {
+    height: 70px;
+  }
+  
+  .banner-content {
+    height: 70px;
+  }
+  
+  .banner-bg-shadow {
+    height: 69px;
+  }
+  
+  .banner-bg {
+    height: 67px;
+  }
+  
+  .banner-subtitle {
+    left: 50px;
+    top: 12px;
+    font-size: 10px;
+    width: calc(100% - 60px);
+  }
+  
+  .banner-title {
+    left: 50px;
+    top: 30px;
+    font-size: 14px;
+    width: calc(100% - 60px);
+  }
+  
+  .banner-circle {
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 20px;
+  }
+  
+  .banner-cart-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .banner-link-bottom {
+    height: 70px;
+    bottom: 2%; 
+  }
+  
+  .banner-link-bottom .banner-content {
+    height: 70px;
+  }
 }
 
 @media (max-width: 1000px) {
-	img {
-		width: 100%;
-	}
-	.hero img {
-		width: 101%;
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+  img {
+    width: 100%;
+  }
+  
+  .hero img {
+    width: 101%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

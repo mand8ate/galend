@@ -1,70 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Seiou92</title>
-		<link rel="stylesheet" href="./src/css/style.css" />
-	</head>
-	<body>
-		<main>
-			<div class="image-container">
-				<section class="hero">
-					<img src="./public/images/hero.png" alt="ヒーロ画像" />
-				</section>
-				<section>
-					<img src="./public/images/types.png" alt="タイプ違い" />
-				</section>
-				<section>
-					<img src="./public/images/pricing.png" alt="値段設定" />
-				</section>
-				<section>
-					<img
-						src="./public/images/seiou92desc.png"
-						alt="seiou92説明"
-					/>
-				</section>
-				<section>
-					<img src="./public/images/product.png" alt="商品説明" />
-				</section>
-				<section>
-					<img
-						src="./public/images/product2.png"
-						alt="商品説明続き"
-					/>
-				</section>
-				<section id="jelly">
-					<img
-						src="./public/images/jellytype.png"
-						alt="ゼリータイプ"
-					/>
-				</section>
-				<section id="drink">
-					<img
-						src="./public/images/drinktype.png"
-						alt="ドリンクタイプ"
-					/>
-				</section>
-				<section>
-					<img
-						src="./public/images/commonIngredients.png"
-						alt="共通成分"
-					/>
-				</section>
-				<section>
-					<img
-						src="./public/images/seiou92premium.png"
-						alt="seiou92premium"
-					/>
-				</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seiou92</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="image-container">
+        <section class="hero">
+          <img src="./public/images/hero.png" alt="ヒーロ画像" />
+        </section>
+        <section class="types-section">
+          <img src="./public/images/types.png" alt="タイプ違い" />
+          <div class="button-container">
+            <a href="#jelly" class="button-link">
+              <button class="type-button">
+                <div class="button-bg jelly-gradient"></div>
+                <div class="button-text">ゼリータイプ詳細</div>
+                <div class="button-circle">
+                  <img
+                    src="./public/idLinkButton/arrow.svg"
+                    alt="Arrow"
+                    class="arrow-icon"
+                  />
+                </div>
+              </button>
+            </a>
+            <a href="#drink" class="button-link">
+              <button class="type-button">
+                <div class="button-bg drink-gradient"></div>
+                <div class="button-text">ドリンクタイプ詳細</div>
+                <div class="button-circle">
+                  <img
+                    src="./public/idLinkButton/arrow.svg"
+                    alt="Arrow"
+                    class="arrow-icon"
+                  />
+                </div>
+              </button>
+            </a>
+          </div>
+        </section>
+        <div class="image-container">
+          <section class="pricing">
+            <img src="./public/images/pricing.png" alt="値段設定" />
+          </section>
+
+          <section class="banner-section">
+            <a href="#" class="banner-link">
+              <div class="banner-content">
+                <div class="banner-bg-shadow"></div>
+                <div class="banner-bg"></div>
+                <div class="banner-subtitle">
+                  手軽にで美味しい、だから毎日続けたくなる。
+                </div>
+                <div class="banner-title">プレミアムな青汁習慣を始める</div>
+                <div class="banner-circle">
+                  <img
+                    src="./public/premiumButton/cart.svg"
+                    alt="Cart"
+                    class="banner-cart-icon"
+                  />
+                </div>
+              </div>
+            </a>
+          </section>
+
+          <section class="product">
+            <img src="./public/images/seiou92desc.png" alt="seiou92説明" />
+          </section>
+        </div>
         <section>
-          <img src="./public/images/health.png" alt="美容と健康">
+          <img src="./public/images/product.png" alt="商品説明" />
         </section>
         <section>
-          <img src="./public/images/pricing2.png" alt="値段設定2">
+          <img src="./public/images/product2.png" alt="商品説明続き" />
         </section>
-			</div>
-		</main>
-		<script src="./src/js/main.js"></script>
-	</body>
+        <section id="jelly">
+          <img src="./public/images/jellytype.png" alt="ゼリータイプ" />
+        </section>
+        <section id="drink">
+          <img src="./public/images/drinktype.png" alt="ドリンクタイプ" />
+        </section>
+        <section>
+          <img src="./public/images/commonIngredients.png" alt="共通成分" />
+        </section>
+        <section>
+          <img src="./public/images/seiou92premium.png" alt="seiou92premium" />
+        </section>
+        <section>
+          <img src="./public/images/health.png" alt="美容と健康" />
+        </section>
+        <section class="pricing2-section">
+  <img src="./public/images/pricing2.png" alt="値段設定2" />
+  
+  <a href="#" class="banner-link banner-link-bottom">
+    <div class="banner-content">
+      <div class="banner-bg-shadow"></div>
+      <div class="banner-bg"></div>
+      <div class="banner-subtitle">手軽にで美味しい、だから毎日続けたくなる。</div>
+      <div class="banner-title">プレミアムな青汁習慣を始める</div>
+      <div class="banner-circle">
+        <img
+          src="./public/stickyButton/cart.svg" 
+          alt="Cart"
+          class="banner-cart-icon"
+        />
+      </div>
+      <div class="banner-eye1"></div>
+      <div class="banner-eye2"></div>
+      <div class="banner-mouth"></div>
+    </div>
+  </a>
+</section>
+      </div>
+    </main>
+    <div class="sticky-button">
+      <div class="outer-circle"></div>
+      <div class="inner-circle"></div>
+      <img
+        class="button-image"
+        src="./public/stickyButton/button1.png"
+        alt="SEIOU92 Button Image"
+      />
+      <div class="premium-text">SEIOU92premium</div>
+      <div class="cta-text">ご購入は<br />こちら</div>
+    </div>
+    <script src="./src/js/main.js"></script>
+  </body>
 </html>
